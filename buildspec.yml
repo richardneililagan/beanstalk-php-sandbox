@@ -5,4 +5,10 @@ phases:
     commands:
       - composer install 
 
+  build:
+    commands:
+      - "./vendor/bin/phpunit --bootstrap vendor/autoloadphp **/*.spec.php"
 
+artifacts:
+  files:
+    - '**/*'
