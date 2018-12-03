@@ -8,6 +8,7 @@ final class MathTest extends TestCase
   public function testCanAddTwoNumbers(): void 
   {
     $this->assertEquals(20, sum(10, 10));
+    return;
   }
 }
 
