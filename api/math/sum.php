@@ -11,9 +11,14 @@ require_once("../../utils/math.php");
 $a = $_GET['a'];
 $b = $_GET['b'];
 
-$sum = sum($a, $b);
+try {
+  $sum = sum($a, $b);
 
-http_response_code(200);
-echo $sum;
+  http_response_code(200);
+  echo $sum;
+} catch (Exception $ex) {
+  http_response_code(418);
+  echo "Exception.";
+}
 
 ?>
